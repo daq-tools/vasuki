@@ -5,7 +5,7 @@ import json
 import logging
 from docopt import docopt, DocoptExit
 
-from vasuki import __appname__, __version__, generate_uuid4, generate_ulid
+from vasuki import __appname__, __version__, generate_uuid4, generate_ulid, generate_naga19
 from vasuki.util import normalize_options, setup_logging
 
 log = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 def run():
     """
     Usage:
-      vasuki (uuid | ulid) [(--upper | --lower)]
+      vasuki (uuid | ulid | naga19) [(--upper | --lower)]
       vasuki --version
       vasuki (-h | --help)
 
@@ -30,6 +30,10 @@ def run():
 
         # ULID
         01DEFKXYCJ0E91DQY0YPWZY01D
+
+        # Nagamani19
+        vasuki naga19
+        Xm3k6mWq
 
         # UUIDv4, uppercase
         vasuki uuid --upper
@@ -61,6 +65,9 @@ def run():
 
     elif options.ulid:
         result = generate_ulid()
+
+    elif options.naga19:
+        result = generate_naga19()
 
     else:
         raise DocoptExit('Unknown identifier type')

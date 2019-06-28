@@ -31,11 +31,15 @@ Generators:
 
 - UUIDv4_ universally unique identifier
 - ULID_ universally unique lexicographically sortable identifier
+- Nagamani19, a short, unique, non-sequential identifier based on Hashids_
+
 Time and randomness is usually taking from the system
-as implemented by the underlying utility libraries.
+as implemented by the libraries underpinning this package.
+
 
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
+.. _Hashids: https://hashids.org/
 
 
 ********
@@ -49,6 +53,10 @@ Synopsis
     # Generate ULID universally unique lexicographically sortable identifier.
     vasuki ulid
 
+    # Generate short id based on Hashids and custom Epoch starting on January 1, 2019.
+    vasuki naga19
+
+
 ********
 Examples
 ********
@@ -60,6 +68,10 @@ Examples
 
     # ULID
     01DEFKXYCJ0E91DQY0YPWZY01D
+
+    # Nagamani19
+    vasuki naga19
+    Xm3k6mWq
 
     # UUIDv4, uppercase
     vasuki uuid --upper

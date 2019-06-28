@@ -4,3 +4,4 @@ __version__ = '0.0.0'
 
 from vasuki.gen.uuid import generate_uuid4
 from vasuki.gen.ulid import generate_ulid
+from vasuki.gen.naga import generate_naga19

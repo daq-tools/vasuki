@@ -54,6 +54,7 @@ setup(name='vasuki',
           'docopt==0.6.2',
           'munch==2.3.2',
           'ulid-py==0.0.9',
+          'hashids==1.2.0',
       ],
       extras_require={},
       dependency_links=[

@@ -61,6 +61,14 @@ Examples
     # ULID
     01DEFKXYCJ0E91DQY0YPWZY01D
 
+    # UUIDv4, uppercase
+    vasuki uuid --upper
+    43FA0272-CA48-40AE-8CC1-204302D91D89
+
+    # ULID, lowercase
+    vasuki ulid --lower
+    01defkz01k47dqkvcyhy0mz06e
+
 
 *********
 Etymology

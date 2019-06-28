@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 def run():
     """
     Usage:
-      vasuki uuid|ulid
+      vasuki (uuid | ulid) [(--upper | --lower)]
       vasuki --version
       vasuki (-h | --help)
 
@@ -31,6 +31,14 @@ def run():
         # ULID
         01DEFKXYCJ0E91DQY0YPWZY01D
 
+        # UUIDv4, uppercase
+        vasuki uuid --upper
+        43FA0272-CA48-40AE-8CC1-204302D91D89
+
+        # ULID, lowercase
+        vasuki ulid --lower
+        01defkz01k47dqkvcyhy0mz06e
+
     """
 
     # Parse command line arguments
@@ -46,8 +54,22 @@ def run():
     # Debugging
     log.debug('Options: {}'.format(json.dumps(options, indent=4)))
 
+    result = None
+
     if options.uuid:
-        print(generate_uuid4())
+        result = generate_uuid4()
 
     elif options.ulid:
-        print(generate_ulid())
+        result = generate_ulid()
+
+    else:
+        raise DocoptExit('Unknown identifier type')
+
+    # Transform identifier.
+    if options.lower:
+        result = result.lower()
+    if options.upper:
+        result = result.upper()
+
+    # Output identifier to STDOUT.
+    print(result)

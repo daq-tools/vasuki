@@ -19,7 +19,47 @@ Vasuki
 *****
 About
 *****
-Id generator of all trades.
+Id generator of all trades aiming to make id generation effortless.
+There might still be dragons.
+
+
+********
+Features
+********
+
+Generators:
+
+- UUIDv4_ universally unique identifier
+- ULID_ universally unique lexicographically sortable identifier
+Time and randomness is usually taking from the system
+as implemented by the underlying utility libraries.
+
+.. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
+.. _ULID: https://github.com/ulid/spec
+
+
+********
+Synopsis
+********
+::
+
+    # Generate UUIDv4 universally unique identifier.
+    vasuki uuid
+
+    # Generate ULID universally unique lexicographically sortable identifier.
+    vasuki ulid
+
+********
+Examples
+********
+::
+
+    # UUIDv4
+    vasuki uuid
+    d192b464-d32c-48f1-9c23-0fe04a4e8133
+
+    # ULID
+    01DEFKXYCJ0E91DQY0YPWZY01D
 
 
 *********

@@ -19,7 +19,10 @@ Vasuki
 *****
 About
 *****
-Id generator of all trades aiming to make id generation effortless.
+Vasuki generates different kinds of unique identifiers, tokens and words.
+
+It aims to make identifier generation effortless.
+
 There might still be dragons.
 
 
@@ -32,6 +35,7 @@ Generators:
 - UUIDv4_ universally unique identifier
 - ULID_ universally unique lexicographically sortable identifier
 - Nagamani19, a short, unique, non-sequential identifier based on Hashids_
+  and a custom Epoch starting on January 1, 2019.
 - Gibberish_ random, pronounceable pseudo-words
 
 Time and randomness is usually taking from the system
@@ -55,7 +59,7 @@ Synopsis
     # Generate ULID universally unique lexicographically sortable identifier.
     vasuki ulid
 
-    # Generate short id based on Hashids and custom Epoch starting on January 1, 2019.
+    # Generate Nagamani19 short, unique, non-sequential identifier.
     vasuki naga19
 
     # Generate random, pronounceable pseudo-words
@@ -83,6 +87,11 @@ Examples
     shoomly
 
 
+With transformations
+====================
+Vasuki can apply uppercase or lowercase transformation to the
+generated identifier or word::
+
     # UUIDv4, uppercase
     vasuki uuid --upper
     43FA0272-CA48-40AE-8CC1-204302D91D89
@@ -90,6 +99,13 @@ Examples
     # ULID, lowercase
     vasuki ulid --lower
     01defkz01k47dqkvcyhy0mz06e
+
+With variable word length
+=========================
+::
+
+    vasuki gibberish --wordlength medium
+    schreblyiopp
 
 
 *********

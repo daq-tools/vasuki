@@ -5,7 +5,9 @@ import os
 from datetime import datetime
 from binascii import hexlify
 from hashids import Hashids
-
+"""
+Nagamani19, a short, unique, non-sequential identifier based on Hashids.
+"""
 
 salt = None
 

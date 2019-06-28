@@ -13,6 +13,8 @@ log = logging.getLogger(__name__)
 
 def run():
     """
+    Vasuki generates different kinds of unique identifiers, tokens and words.
+
     Usage:
       vasuki (uuid | ulid | naga19 | gibberish) [--wordlength=<wordlength>] [(--upper | --lower)]
       vasuki --version

@@ -1,4 +1,4 @@
-"""Vasuki is an id generator of all trades"""
+"""Vasuki generates different kinds of unique identifiers, tokens and words"""
 __appname__ = 'vasuki'
 __version__ = '0.0.0'
 

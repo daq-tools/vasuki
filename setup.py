@@ -7,7 +7,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 setup(name='vasuki',
       version='0.0.0',
-      description='Vasuki is an id generator of all trades',
+      description='Vasuki generates different kinds of unique identifiers, tokens and words',
       long_description=README,
       license="Apache-2.0",
       classifiers=[

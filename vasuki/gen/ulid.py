@@ -5,4 +5,8 @@ import ulid
 
 
 def generate_ulid():
+    """
+    - https://github.com/ulid/spec
+    - https://pypi.org/project/ulid-py/
+    """
     return str(ulid.new())

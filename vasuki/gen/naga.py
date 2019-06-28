@@ -52,6 +52,7 @@ def hashify(salt, *data):
     pack a list of numbers into a single Hashid.
 
     - https://hashids.org/
+    - https://hashids.org/python/
     - https://github.com/davidaurelio/hashids-python
     """
     hashids = Hashids(salt=salt)

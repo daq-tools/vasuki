@@ -32,6 +32,7 @@ Generators:
 - UUIDv4_ universally unique identifier
 - ULID_ universally unique lexicographically sortable identifier
 - Nagamani19, a short, unique, non-sequential identifier based on Hashids_
+- Gibberish_ random, pronounceable pseudo-words
 
 Time and randomness is usually taking from the system
 as implemented by the libraries underpinning this package.
@@ -40,6 +41,7 @@ as implemented by the libraries underpinning this package.
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
 .. _Hashids: https://hashids.org/
+.. _Gibberish: https://github.com/greghaskins/gibberish
 
 
 ********
@@ -55,6 +57,9 @@ Synopsis
 
     # Generate short id based on Hashids and custom Epoch starting on January 1, 2019.
     vasuki naga19
+
+    # Generate random, pronounceable pseudo-words
+    vasuki gibberish
 
 
 ********
@@ -72,6 +77,11 @@ Examples
     # Nagamani19
     vasuki naga19
     Xm3k6mWq
+
+    # Gibberish
+    vasuki gibberish
+    shoomly
+
 
     # UUIDv4, uppercase
     vasuki uuid --upper

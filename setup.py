@@ -55,9 +55,11 @@ setup(name='vasuki',
           'munch==2.3.2',
           'ulid-py==0.0.9',
           'hashids==1.2.0',
+          'gibberish==0.3',
       ],
       extras_require={},
       dependency_links=[
+          'https://github.com/greghaskins/gibberish/tarball/3ec39861#egg=gibberish-0.3',
       ],
       entry_points={
           'console_scripts': [

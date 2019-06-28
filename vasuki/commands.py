@@ -5,7 +5,7 @@ import json
 import logging
 from docopt import docopt, DocoptExit
 
-from vasuki import __appname__, __version__, generate_uuid4, generate_ulid, generate_naga19
+from vasuki import __appname__, __version__, generate_uuid4, generate_ulid, generate_naga19, generate_gibberish
 from vasuki.util import normalize_options, setup_logging
 
 log = logging.getLogger(__name__)
@@ -14,10 +14,14 @@ log = logging.getLogger(__name__)
 def run():
     """
     Usage:
-      vasuki (uuid | ulid | naga19) [(--upper | --lower)]
+      vasuki (uuid | ulid | naga19 | gibberish) [--wordlength=<wordlength>] [(--upper | --lower)]
       vasuki --version
       vasuki (-h | --help)
 
+    Options:
+      --wordlength=<wordlength>         Length of word (small, medium, large)
+      --upper                           Transform to upper case
+      --lower                           Transform to lower case
       --version                         Show version information
       --debug                           Enable debug messages
       -h --help                         Show this screen
@@ -35,6 +39,12 @@ def run():
         vasuki naga19
         Xm3k6mWq
 
+        # Gibberish
+        vasuki gibberish
+        shoomly
+
+    Examples with transformations::
+
         # UUIDv4, uppercase
         vasuki uuid --upper
         43FA0272-CA48-40AE-8CC1-204302D91D89
@@ -42,6 +52,11 @@ def run():
         # ULID, lowercase
         vasuki ulid --lower
         01defkz01k47dqkvcyhy0mz06e
+
+    Examples with variable word length::
+
+        vasuki gibberish --wordlength medium
+        schreblyiopp
 
     """
 
@@ -58,16 +73,20 @@ def run():
     # Debugging
     log.debug('Options: {}'.format(json.dumps(options, indent=4)))
 
-    result = None
-
     if options.uuid:
+        assert options.wordlength is None, 'Option "wordlength" makes no sense for UUID'
         result = generate_uuid4()
 
     elif options.ulid:
+        assert options.wordlength is None, 'Option "wordlength" makes no sense for ULID'
         result = generate_ulid()
 
     elif options.naga19:
+        assert options.wordlength is None, 'Option "wordlength" makes no sense for Nagamani19'
         result = generate_naga19()
+
+    elif options.gibberish:
+        result = generate_gibberish(options.wordlength)
 
     else:
         raise DocoptExit('Unknown identifier type')

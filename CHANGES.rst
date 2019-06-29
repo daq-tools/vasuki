@@ -21,6 +21,7 @@ in progress
 - Swap display order of generators
 - Generate multiple tokens at once
 - Make Nagamani19 generator obtain size, mapping it to precision
+- Adjust Gibberish generator re. size parameter
 
 
 2019-06-28 0.0.0

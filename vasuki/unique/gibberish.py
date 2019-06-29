@@ -4,15 +4,15 @@
 from gibberish import Gibberish
 
 
-len_options = {'small': 1, 'medium': 2, 'large': 3}
+size_map = {'small': 1, 'medium': 2, 'large': 3}
 generator = Gibberish()
 
 
-def generate_gibberish(wordlength=None):
-    vowel_consonant_repeats = get_wordlength(wordlength)
+def generate_gibberish(size=None):
+    vowel_consonant_repeats = get_wordlength(size)
     return generator.generate_word(vowel_consonant_repeats=vowel_consonant_repeats)
 
 
 def get_wordlength(selector):
     selector = selector or 'small'
-    return len_options[selector]
+    return size_map[selector]

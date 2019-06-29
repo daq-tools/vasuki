@@ -41,7 +41,7 @@ class VasukiCommand:
             result = generate_nagamani19(size=self.options.size)
 
         elif self.options.gibberish:
-            result = generate_gibberish(self.options.size)
+            result = generate_gibberish(size=self.options.size)
 
         elif self.options.moment:
             assert self.options.size is None, 'Option "size" not implemented for MomentName'

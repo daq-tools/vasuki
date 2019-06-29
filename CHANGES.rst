@@ -5,6 +5,10 @@ Changelog
 
 in progress
 ===========
+
+
+2019-06-30 0.1.0
+================
 - Basic implementation
 - Add UUIDv4 identifiers
 - Add ULID identifiers
@@ -23,7 +27,3 @@ in progress
 - Make Nagamani19 generator obtain size, mapping it to precision
 - Adjust Gibberish generator re. size parameter
 - Improve main HTML UI with metadata
-
-
-2019-06-28 0.0.0
-================

@@ -72,7 +72,8 @@ def run():
 
     Multiple tokens at once::
 
-        vasuki naga19 --count 100
+        vasuki naga19 --count 10
+        vasuki gibberish --size large --count 50
 
     Slug tools::
 

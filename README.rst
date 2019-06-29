@@ -62,7 +62,6 @@ Optional service API
 ====================
 The fine responder_ optionally exposes the machinery as HTTP API.
 
-
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
 .. _Hashids: https://hashids.org/
@@ -148,6 +147,30 @@ Slug tools
     vasuki slug 42 --format=sixnibble
     Baca
 
+Multiple tokens at once
+=======================
+::
+
+    vasuki naga19 --count 10
+    vasuki gibberish --size large --count 50
+
+
+HTTP API
+=========
+Example requests would look like::
+
+    # UUIDv4
+    /unique/uuid
+
+    # Uppercase UUIDv4
+    /unique/uuid?upper=true
+
+    # Multiple ULIDs
+    /unique/ulid?count=10
+
+    # Very short Nagamani19
+    /unique/naga19?size=small
+
 
 *******
 Credits
@@ -158,6 +181,7 @@ Credits
 - Oliver Robson for https://github.com/HowManyOliversAreThere/six-nibble-name
 - All authors for all other fine pieces this software is made of.
 - Mozilla for `Zilla Slab`_
+- Vasuki Logo from https://en.wikipedia.org/wiki/Vasuki
 
 .. _Zilla Slab: https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/
 

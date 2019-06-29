@@ -9,6 +9,9 @@
 
 |
 
+.. figure:: https://ptrace.hiveeyes.org/2019-06-29_vasuki-small.jpg
+    :target: https://en.wikipedia.org/wiki/Vasuki#/media/File:Kurma,_the_tortoise_incarnation_of_Vishnu.jpg
+
 .. vasuki-readme:
 
 ######

@@ -41,11 +41,16 @@ Generators:
 Time and randomness is usually taking from the system
 as implemented by the libraries underpinning this package.
 
+Slugifiers:
+
+- `six-nibble-name`_ converts six nibbles (three bytes) into a 4-character name
+
 
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
 .. _Hashids: https://hashids.org/
 .. _Gibberish: https://github.com/greghaskins/gibberish
+.. _six-nibble-name: https://github.com/HowManyOliversAreThere/six-nibble-name
 
 
 ********
@@ -69,6 +74,9 @@ Synopsis
 ********
 Examples
 ********
+
+Identifier generation
+=====================
 ::
 
     # UUIDv4
@@ -106,6 +114,23 @@ With variable word length
 
     vasuki gibberish --wordlength medium
     schreblyiopp
+
+
+Slug tools
+==========
+::
+
+    vasuki slug 42 --format=sixnibble
+    Baca
+
+
+*******
+Credits
+*******
+- Andrew Hawker for https://github.com/ahawker/ulid
+- David Aurelio for https://github.com/davidaurelio/hashids-python
+- Gregory Haskins for https://github.com/greghaskins/gibberish
+- Oliver Robson for https://github.com/HowManyOliversAreThere/six-nibble-name
 
 
 *********

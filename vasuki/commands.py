@@ -5,7 +5,8 @@ import json
 import logging
 from docopt import docopt, DocoptExit
 
-from vasuki import __appname__, __version__, generate_uuid4, generate_ulid, generate_naga19, generate_gibberish
+from vasuki import generate_uuid4, generate_ulid, generate_naga19, generate_gibberish, integer_slug
+from vasuki import __appname__, __version__
 from vasuki.util import normalize_options, setup_logging
 
 log = logging.getLogger(__name__)
@@ -17,6 +18,7 @@ def run():
 
     Usage:
       vasuki (uuid | ulid | naga19 | gibberish) [--wordlength=<wordlength>] [(--upper | --lower)]
+      vasuki slug <value> --format=<format>
       vasuki --version
       vasuki (-h | --help)
 
@@ -24,6 +26,7 @@ def run():
       --wordlength=<wordlength>         Length of word (small, medium, large)
       --upper                           Transform to upper case
       --lower                           Transform to lower case
+      --format=<format>                 Format for transformations for slugs, etc.
       --version                         Show version information
       --debug                           Enable debug messages
       -h --help                         Show this screen
@@ -55,10 +58,15 @@ def run():
         vasuki ulid --lower
         01defkz01k47dqkvcyhy0mz06e
 
-    Examples with variable word length::
+    Example with variable word length::
 
         vasuki gibberish --wordlength medium
         schreblyiopp
+
+    Slug tools::
+
+        vasuki slug 42 --format=sixnibble
+        Baca
 
     """
 
@@ -90,8 +98,19 @@ def run():
     elif options.gibberish:
         result = generate_gibberish(options.wordlength)
 
+    elif options.slug:
+        if options.format == 'sixnibble':
+            try:
+                intvalue = int(options.value)
+            except ValueError:
+                raise ValueError(f'sixnibble formatter only accepts integer values but got value={options.value}')
+
+            result = integer_slug(intvalue)
+        else:
+            raise DocoptExit('Format not implemented')
+
     else:
-        raise DocoptExit('Unknown identifier type')
+        raise DocoptExit('Identifier type not implemented')
 
     # Transform identifier.
     if options.lower:

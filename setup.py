@@ -7,7 +7,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 setup(name='vasuki',
       version='0.0.0',
-      description='Vasuki generates different kinds of unique identifiers, tokens and words',
+      description='Vasuki generates different kinds of random unique identifiers, tokens and words',
       long_description=README,
       license="Apache-2.0",
       classifiers=[
@@ -57,13 +57,17 @@ setup(name='vasuki',
           'hashids==1.2.0',
           'gibberish==0.3',
       ],
-      extras_require={},
+      extras_require={
+          'service': [
+              'responder==1.3.1',
+          ],
+      },
       dependency_links=[
           'https://github.com/greghaskins/gibberish/tarball/3ec39861#egg=gibberish-0.3',
       ],
       entry_points={
           'console_scripts': [
-              'vasuki = vasuki.commands:run',
+              'vasuki = vasuki.cli:run',
           ],
       },
 )

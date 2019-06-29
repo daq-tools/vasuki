@@ -1,0 +1,16 @@
+html {
+    font-family: Zilla Slab;
+}
+ul {
+    margin-bottom: 2rem;
+}
+li {
+    margin-bottom: 1rem;
+}
+.item {
+    width: 5rem;
+    display: inline-block;
+}
+pre {
+    display: inline;
+}

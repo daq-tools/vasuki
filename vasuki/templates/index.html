@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Vasuki - random unique identifiers, tokens and words</title>
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css">
+    <link rel="stylesheet" href="./static/vasuki.css?bust={{ cache_bust }}">
+    <style>
+    </style>
+</head>
+
+<body>
+
+<h1>Vasuki - random unique identifiers, tokens and words</h1>
+
+<ul>
+    {% for item in index %}
+    <li>
+        <strong>{{ item.name or '' }}</strong> {{ item.description or '' }}
+        <br/>
+        <span class="item">
+        <a class="item" href="./unique/{{ item.key }}">{{ item.key }}</a>
+        </span>
+        <span class="options">
+        {% for param in item.get('params', []) %}
+        <a href="./unique/{{ item.name }}?{{ param }}">[{{ param }}]</a>&nbsp;
+        {% endfor %}
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+
+<hr/>
+
+<small>
+    <a href="https://github.com/daq-tools/vasuki">Vasuki on GitHub</a>
+    |
+    <a href="https://pypi.org/project/vasuki/">Vasuki on PyPI</a>
+    |
+    Install: <pre>pip install vasuki</pre>
+</small>
+
+</body>
+
+</html>

@@ -26,6 +26,18 @@ It aims to make identifier generation effortless.
 There might still be dragons.
 
 
+*******
+Install
+*******
+::
+
+    pip install vasuki
+
+With service API::
+
+    pip install vasuki[service]
+
+
 ********
 Features
 ********
@@ -45,12 +57,17 @@ Slugifiers:
 
 - `six-nibble-name`_ converts six nibbles (three bytes) into a 4-character name
 
+Optional service API
+====================
+The fine responder_ optionally exposes the machinery as HTTP API.
+
 
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
 .. _Hashids: https://hashids.org/
 .. _Gibberish: https://github.com/greghaskins/gibberish
 .. _six-nibble-name: https://github.com/HowManyOliversAreThere/six-nibble-name
+.. _responder: https://pypi.org/project/responder/
 
 
 ********
@@ -135,6 +152,10 @@ Credits
 - David Aurelio for https://github.com/davidaurelio/hashids-python
 - Gregory Haskins for https://github.com/greghaskins/gibberish
 - Oliver Robson for https://github.com/HowManyOliversAreThere/six-nibble-name
+- All authors for all other fine pieces this software is made of.
+- Mozilla for `Zilla Slab`_
+
+.. _Zilla Slab: https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/
 
 
 *********

@@ -5,8 +5,8 @@ import json
 import logging
 from docopt import docopt, DocoptExit
 
-from vasuki import generate_uuid4, generate_ulid, generate_naga19, generate_gibberish, integer_slug, generate_nibbleword
 from vasuki import __appname__, __version__
+from vasuki.core import VasukiCommand
 from vasuki.util import normalize_options, setup_logging
 
 log = logging.getLogger(__name__)
@@ -19,6 +19,7 @@ def run():
     Usage:
       vasuki (uuid | ulid | naga19 | gibberish | nibble) [--wordlength=<wordlength>] [(--upper | --lower)]
       vasuki slug <value> --format=<format>
+      vasuki service [--listen=<listen>]
       vasuki --version
       vasuki (-h | --help)
 
@@ -27,6 +28,7 @@ def run():
       --upper                           Transform to upper case
       --lower                           Transform to lower case
       --format=<format>                 Format for transformations for slugs, etc.
+      --listen=<listen>                 HTTP server listen address. [Default: localhost:24641]
       --version                         Show version information
       --debug                           Enable debug messages
       -h --help                         Show this screen
@@ -72,6 +74,10 @@ def run():
         vasuki slug 42 --format=sixnibble
         Baca
 
+    Start API service::
+
+        vasuki service
+
     """
 
     # Parse command line arguments
@@ -87,44 +93,21 @@ def run():
     # Debugging
     log.debug('Options: {}'.format(json.dumps(options, indent=4)))
 
-    if options.uuid:
-        assert options.wordlength is None, 'Option "wordlength" makes no sense for UUID'
-        result = generate_uuid4()
+    if options.service:
+        listen_address = options.listen
+        log.info(f'Starting web service on {listen_address}')
+        from vasuki.api import start_service
+        start_service(listen_address)
+        return
 
-    elif options.ulid:
-        assert options.wordlength is None, 'Option "wordlength" makes no sense for ULID'
-        result = generate_ulid()
-
-    elif options.naga19:
-        assert options.wordlength is None, 'Option "wordlength" makes no sense for Nagamani19'
-        result = generate_naga19()
-
-    elif options.gibberish:
-        result = generate_gibberish(options.wordlength)
-
-    elif options.nibble:
-        assert options.wordlength is None, 'Option "wordlength" makes no sense for sixnibble'
-        result = generate_nibbleword()
-
-    elif options.slug:
-        if options.format == 'sixnibble':
-            try:
-                intvalue = int(options.value)
-            except ValueError:
-                raise ValueError(f'sixnibble formatter only accepts integer values but got value={options.value}')
-
-            result = integer_slug(intvalue)
-        else:
-            raise DocoptExit('Format not implemented')
-
-    else:
-        raise DocoptExit('Identifier type not implemented')
-
-    # Transform identifier.
-    if options.lower:
-        result = result.lower()
-    if options.upper:
-        result = result.upper()
+    # Run command.
+    try:
+        workload = VasukiCommand(options)
+        result = workload.run()
+    except Exception as ex:
+        message = str(ex)
+        log.error(message)
+        raise DocoptExit(message)
 
     # Output identifier to STDOUT.
     print(result)

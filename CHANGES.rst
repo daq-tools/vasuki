@@ -14,6 +14,7 @@ in progress
 - Add six-nibble-name integer slug
 - Add 4-character nibbleword generator
 - Add release tooling
+- Expose generators via HTTP API
 
 
 2019-06-28 0.0.0

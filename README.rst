@@ -46,10 +46,10 @@ Unique ID generators
 ====================
 - UUIDv4_ universally unique identifier
 - ULID_ universally unique lexicographically sortable identifier
-- Nagamani19, a short, unique, non-sequential identifier based on Hashids_
-  and a custom Epoch starting on January 1, 2019.
 - Gibberish_ random, pronounceable pseudo-words
 - MomentName, a short epoch slug
+- Nagamani19, a short, unique, non-sequential identifier based on Hashids_
+  and a custom Epoch starting on January 1, 2019.
 
 Time and randomness is usually taking from the system
 as implemented by the libraries underpinning this package.
@@ -82,14 +82,14 @@ Synopsis
     # ULID universally unique lexicographically sortable identifier.
     vasuki ulid
 
-    # Nagamani19 short, unique, non-sequential identifier.
-    vasuki naga19
-
     # Gibberish random, pronounceable pseudo-words
     vasuki gibberish
 
     # MomentName short epoch slugs
     vasuki moment
+
+    # Nagamani19 short, unique, non-sequential identifier.
+    vasuki naga19
 
 
 ********
@@ -107,10 +107,6 @@ Identifier generation
     # ULID
     01DEFKXYCJ0E91DQY0YPWZY01D
 
-    # Nagamani19
-    vasuki naga19
-    Xm3k6mWq
-
     # Gibberish
     vasuki gibberish
     shoomly
@@ -118,6 +114,10 @@ Identifier generation
     # MomentName
     vasuki moment
     Zese
+
+    # Nagamani19
+    vasuki naga19
+    Xm3k6mWq
 
 
 With transformations

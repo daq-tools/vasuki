@@ -18,6 +18,7 @@ in progress
 - Improve performance of gibberish generator
 - Wording: Use ``MomentName`` for generator
 - Wording: Rename ``--wordlength`` to ``--size``
+- Swap display order of generators
 
 
 2019-06-28 0.0.0

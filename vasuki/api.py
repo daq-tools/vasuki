@@ -22,9 +22,9 @@ async def vasuki_index(request, response):
     index = munchify([
         {'key': 'uuid', 'name': 'UUIDv4', 'params': ['upper=true'], 'description': 'universally unique identifier'},
         {'key': 'ulid', 'name': 'ULID', 'params': ['lower=true'], 'description': 'universally unique lexicographically sortable identifier'},
-        {'key': 'naga19', 'name': 'Nagamani19', 'description': 'short, unique, non-sequential identifier'},
         {'key': 'gibberish', 'name': 'Gibberish', 'params': ['size=small', 'size=medium', 'size=large'], 'description': 'random, pronounceable pseudo-words'},
         {'key': 'moment', 'name': 'MomentName', 'description': 'short epoch slug'},
+        {'key': 'naga19', 'name': 'Nagamani19', 'description': 'short, unique, non-sequential identifier'},
     ])
 
     cache_bust = False

@@ -137,7 +137,7 @@ With variable word length
 =========================
 ::
 
-    vasuki gibberish --wordlength medium
+    vasuki gibberish --size medium
     schreblyiopp
 
 

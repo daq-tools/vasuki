@@ -17,14 +17,14 @@ def run():
     Vasuki generates different kinds of unique identifiers, tokens and words.
 
     Usage:
-      vasuki (uuid | ulid | naga19 | gibberish | moment) [--wordlength=<wordlength>] [(--upper | --lower)]
+      vasuki (uuid | ulid | naga19 | gibberish | moment) [--size=<size>] [(--upper | --lower)]
       vasuki slug <value> --format=<format>
       vasuki service [--listen=<listen>]
       vasuki --version
       vasuki (-h | --help)
 
     Options:
-      --wordlength=<wordlength>         Length of word (small, medium, large)
+      --size=<size>                     Size of item (small, medium, large)
       --upper                           Transform to upper case
       --lower                           Transform to lower case
       --format=<format>                 Format for transformations for slugs, etc.
@@ -66,7 +66,7 @@ def run():
 
     Example with variable word length::
 
-        vasuki gibberish --wordlength medium
+        vasuki gibberish --size medium
         schreblyiopp
 
     Slug tools::

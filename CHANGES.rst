@@ -17,6 +17,7 @@ in progress
 - Expose generators via HTTP API
 - Improve performance of gibberish generator
 - Wording: Use ``MomentName`` for generator
+- Wording: Rename ``--wordlength`` to ``--size``
 
 
 2019-06-28 0.0.0

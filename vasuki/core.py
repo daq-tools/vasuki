@@ -15,22 +15,22 @@ class VasukiCommand:
 
         # Unique identifier generators
         if self.options.uuid:
-            assert self.options.wordlength is None, 'Option "wordlength" makes no sense for UUID'
+            assert self.options.size is None, 'Option "size" makes no sense for UUID'
             result = generate_uuid4()
 
         elif self.options.ulid:
-            assert self.options.wordlength is None, 'Option "wordlength" makes no sense for ULID'
+            assert self.options.size is None, 'Option "size" makes no sense for ULID'
             result = generate_ulid()
 
         elif self.options.naga19:
-            assert self.options.wordlength is None, 'Option "wordlength" makes no sense for Nagamani19'
+            assert self.options.size is None, 'Option "size" makes no sense for Nagamani19'
             result = generate_nagamani19()
 
         elif self.options.gibberish:
-            result = generate_gibberish(self.options.wordlength)
+            result = generate_gibberish(self.options.size)
 
         elif self.options.moment:
-            assert self.options.wordlength is None, 'Option "wordlength" not implemented for MomentName'
+            assert self.options.size is None, 'Option "size" not implemented for MomentName'
             result = generate_momentname()
 
         # Slugifiers

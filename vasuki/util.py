@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
-# Apache License, Version 2
+# License: GNU Affero General Public License, Version 3
 import sys
 import logging
 from munch import munchify

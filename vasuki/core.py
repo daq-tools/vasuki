@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
-# Apache License, Version 2
+# License: GNU Affero General Public License, Version 3
 import logging
 from vasuki import generate_uuid4, generate_ulid, generate_nagamani19, generate_gibberish, integer_slug, generate_momentname
 

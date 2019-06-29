@@ -6,6 +6,10 @@ V = 'aeiou'
 
 
 def integer_slug(uid):
+    """
+    ``six-nibble-name`` converts six nibbles (three bytes) into a 4-character name.
+    https://github.com/HowManyOliversAreThere/six-nibble-name
+    """
     assert type(uid) is int, f'integer_slug only accepts integer types but got value={uid}, type={type(uid)}'
     sb = uid
     n = ''

@@ -49,6 +49,7 @@ Unique ID generators
 - Nagamani19, a short, unique, non-sequential identifier based on Hashids_
   and a custom Epoch starting on January 1, 2019.
 - Gibberish_ random, pronounceable pseudo-words
+- MomentName, a short epoch slug
 
 Time and randomness is usually taking from the system
 as implemented by the libraries underpinning this package.
@@ -87,8 +88,8 @@ Synopsis
     # Gibberish random, pronounceable pseudo-words
     vasuki gibberish
 
-    # Nibble short names from integer slugs
-    vasuki nibble
+    # MomentName short epoch slugs
+    vasuki moment
 
 
 ********
@@ -114,8 +115,8 @@ Identifier generation
     vasuki gibberish
     shoomly
 
-    # Nibble name
-    vasuki nibble
+    # MomentName
+    vasuki moment
     Zese
 
 

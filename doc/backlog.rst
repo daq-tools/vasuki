@@ -4,12 +4,10 @@ Backlog
 
 Tasks
 =====
-- [o] Route more parameters from the HTTP API to the core
+- [o] Rename nibble to MomentName / moment
 - [o] Add ``n`` parameter to generate more tokens at once
-- [o] Add some style
-- [o] Add systemd unit file
-- [o] Rename nibble to Epochslug / epochslug
 - [o] Implement ``--wordlength`` for ``nibbleword``
+- [o] Rename wordlength to wordsize
 - [o] Add slugify-title routine
 - [o] Add original shortid generator
   https://github.com/teris-io/shortid
@@ -34,3 +32,6 @@ Done
 - [x] Add six-nibble-name
 - [x] Add responder
   https://python-responder.org/
+- [x] Route more parameters from the HTTP API to the core
+- [x] Add some style
+- [x] Add systemd unit file

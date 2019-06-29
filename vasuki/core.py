@@ -3,7 +3,7 @@
 # Apache License, Version 2
 from munch import munchify
 
-from vasuki import generate_uuid4, generate_ulid, generate_naga19, generate_gibberish, integer_slug, generate_nibbleword
+from vasuki import generate_uuid4, generate_ulid, generate_nagamani19, generate_gibberish, integer_slug, generate_momentname
 
 
 class VasukiCommand:
@@ -24,14 +24,14 @@ class VasukiCommand:
 
         elif self.options.naga19:
             assert self.options.wordlength is None, 'Option "wordlength" makes no sense for Nagamani19'
-            result = generate_naga19()
+            result = generate_nagamani19()
 
         elif self.options.gibberish:
             result = generate_gibberish(self.options.wordlength)
 
-        elif self.options.nibble:
-            assert self.options.wordlength is None, 'Option "wordlength" makes no sense for sixnibble'
-            result = generate_nibbleword()
+        elif self.options.moment:
+            assert self.options.wordlength is None, 'Option "wordlength" not implemented for MomentName'
+            result = generate_momentname()
 
         # Slugifiers
         elif self.options.slug:

@@ -12,7 +12,7 @@ Nagamani19, a short, unique, non-sequential identifier based on Hashids.
 salt = None
 
 
-def generate_naga19():
+def generate_nagamani19():
     # https://community.hiveeyes.org/t/gestaltung-der-anonymen-identifizierer-ids-fur-die-adressierung-von-imkern-messknoten-und-anderen-entitaten/1079/8
     global salt
     if salt is None:

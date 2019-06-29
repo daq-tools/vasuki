@@ -17,7 +17,7 @@ def run():
     Vasuki generates different kinds of unique identifiers, tokens and words.
 
     Usage:
-      vasuki (uuid | ulid | naga19 | gibberish | nibble) [--wordlength=<wordlength>] [(--upper | --lower)]
+      vasuki (uuid | ulid | naga19 | gibberish | moment) [--wordlength=<wordlength>] [(--upper | --lower)]
       vasuki slug <value> --format=<format>
       vasuki service [--listen=<listen>]
       vasuki --version
@@ -50,8 +50,8 @@ def run():
         vasuki gibberish
         shoomly
 
-        # Nibbleword
-        vasuki nibble
+        # MomentName
+        vasuki moment
         Zese
 
     Examples with transformations::

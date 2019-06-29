@@ -24,7 +24,7 @@ async def vasuki_index(request, response):
         {'key': 'ulid', 'name': 'ULID', 'params': ['lower=true'], 'description': 'universally unique lexicographically sortable identifier'},
         {'key': 'naga19', 'name': 'Nagamani19', 'description': 'short, unique, non-sequential identifier'},
         {'key': 'gibberish', 'name': 'Gibberish', 'params': ['wordlength=small', 'wordlength=medium', 'wordlength=large'], 'description': 'random, pronounceable pseudo-words'},
-        {'key': 'nibble', 'name': 'Nibble', 'description': 'short epoch slug'},
+        {'key': 'moment', 'name': 'MomentName', 'description': 'short epoch slug'},
     ])
 
     cache_bust = False

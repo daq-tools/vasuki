@@ -13,6 +13,7 @@ in progress
 - Add Gibberish words
 - Add six-nibble-name integer slug
 - Add 4-character nibbleword generator
+- Add release tooling
 
 
 2019-06-28 0.0.0

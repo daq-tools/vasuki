@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
 setup(name='vasuki',
-      version='0.0.0',
+      version='0.1.0',
       description='Vasuki generates different kinds of random unique identifiers, tokens and words',
       long_description=README,
       license="AGPL 3, EUPL 1.2",

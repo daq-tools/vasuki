@@ -15,6 +15,7 @@ in progress
 - Add 4-character nibbleword generator
 - Add release tooling
 - Expose generators via HTTP API
+- Improve performance of gibberish generator
 
 
 2019-06-28 0.0.0

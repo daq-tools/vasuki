@@ -28,7 +28,7 @@ async def vasuki_index(request, response):
     ])
 
     cache_bust = False
-    cache_bust = time.time_ns()
+    #cache_bust = time.time_ns()
 
     response.html = api.template('index.html', index=index, cache_bust=cache_bust)
 

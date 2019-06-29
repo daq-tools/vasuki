@@ -4,10 +4,14 @@ Backlog
 
 Tasks
 =====
-- [o] Rename nibble to MomentName / moment
-- [o] Add ``n`` parameter to generate more tokens at once
-- [o] Implement ``--wordlength`` for ``nibbleword``
-- [o] Rename wordlength to wordsize
+- [o] Implement ``--size`` for ``MomentName``
+- [o] Clamp maximum number of tokens generated at once
+- [o] Add rate limiting
+- [o] UI: Buttons
+- [o] Trim down example on ``vasuki --help`` and refer to GitHub page
+
+Generators
+==========
 - [o] Add slugify-title routine
 - [o] Add original shortid generator
   https://github.com/teris-io/shortid
@@ -17,6 +21,7 @@ Tasks
     - https://pypi.org/project/correct-horse/
     - https://pypi.org/project/memorable_password/
     - https://github.com/patarapolw/randomsentence
+- [o] ClassNamer
 
 Research
 ========
@@ -35,3 +40,7 @@ Done
 - [x] Route more parameters from the HTTP API to the core
 - [x] Add some style
 - [x] Add systemd unit file
+- [x] Rename nibble to MomentName / moment
+- [x] Rename wordlength to wordsize
+- [x] Generate more tokens at once
+- [x] UI: Embed, DOCTYPE, encoding

@@ -1,5 +1,5 @@
 include setup.cfg *.rst *.md LICENSE
 exclude .bumpversion.cfg
 exclude *.txt
-recursive-include vasuki *.py *.ini *.json *.html
+recursive-include vasuki *.py *.ini *.json *.html *.css
 prune tests

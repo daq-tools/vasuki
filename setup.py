@@ -56,6 +56,8 @@ setup(name='vasuki',
           'ulid-py==0.0.9',
           'hashids==1.2.0',
           'gibberish==0.3',
+          #'correct-horse==0.3.0',
+          #'flufl.i18n==1.1.3',
       ],
       extras_require={
           'service': [

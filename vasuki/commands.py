@@ -5,7 +5,7 @@ import json
 import logging
 from docopt import docopt, DocoptExit
 
-from vasuki import generate_uuid4, generate_ulid, generate_naga19, generate_gibberish, integer_slug
+from vasuki import generate_uuid4, generate_ulid, generate_naga19, generate_gibberish, integer_slug, generate_nibbleword
 from vasuki import __appname__, __version__
 from vasuki.util import normalize_options, setup_logging
 
@@ -17,7 +17,7 @@ def run():
     Vasuki generates different kinds of unique identifiers, tokens and words.
 
     Usage:
-      vasuki (uuid | ulid | naga19 | gibberish) [--wordlength=<wordlength>] [(--upper | --lower)]
+      vasuki (uuid | ulid | naga19 | gibberish | nibble) [--wordlength=<wordlength>] [(--upper | --lower)]
       vasuki slug <value> --format=<format>
       vasuki --version
       vasuki (-h | --help)
@@ -47,6 +47,10 @@ def run():
         # Gibberish
         vasuki gibberish
         shoomly
+
+        # Nibbleword
+        vasuki nibble
+        Zese
 
     Examples with transformations::
 
@@ -97,6 +101,10 @@ def run():
 
     elif options.gibberish:
         result = generate_gibberish(options.wordlength)
+
+    elif options.nibble:
+        assert options.wordlength is None, 'Option "wordlength" makes no sense for sixnibble'
+        result = generate_nibbleword()
 
     elif options.slug:
         if options.format == 'sixnibble':

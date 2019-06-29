@@ -8,11 +8,12 @@ Generators
 - [x] Add ULID
 - [x] Add Nagamani19
 - [x] Add Gibberish
-- [o] Add six-nibble-name
-  https://github.com/HowManyOliversAreThere/six-nibble-name
+- [x] Add six-nibble-name
 - [o] Add shortid
   https://github.com/teris-io/shortid
-- [o] https://pypi.org/project/StringGenerator/
+- [o] Add https://pypi.org/project/StringGenerator/
+- [o] Add slugify-title routine
+- [o] Implement ``--wordlength`` for ``nibbleword``
 
 Research
 ========

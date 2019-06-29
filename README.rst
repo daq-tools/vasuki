@@ -94,6 +94,10 @@ Identifier generation
     vasuki gibberish
     shoomly
 
+    # Nibbleword
+    vasuki nibble
+    Zese
+
 
 With transformations
 ====================

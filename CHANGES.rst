@@ -12,6 +12,7 @@ in progress
 - Add Nagamani19 identifiers
 - Add Gibberish words
 - Add six-nibble-name integer slug
+- Add 4-character nibbleword generator
 
 
 2019-06-28 0.0.0

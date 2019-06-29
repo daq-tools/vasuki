@@ -49,12 +49,13 @@ async def vasuki_service(request, response, *args, **kwargs):
     # Transform request parameters into munch of options (query arguments).
     options.update(request.params.items())
 
-    # Run command.
+    # Run command, optionally multiple times.
     try:
-        workload = VasukiCommand(options)
-        result = workload.run()
-        log.info(f'Vasuki result: {result}')
-        response.text = result
+        command = VasukiCommand(options)
+        results = command.run_multi()
+
+        # Output identifiers to HTTP response.
+        response.text = '\n'.join(results)
 
     except Exception as ex:
         log.exception('Vasuki failed')

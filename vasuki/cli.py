@@ -17,7 +17,7 @@ def run():
     Vasuki generates different kinds of unique identifiers, tokens and words.
 
     Usage:
-      vasuki (uuid | ulid | gibberish | moment | naga19) [--size=<size>] [(--upper | --lower)]
+      vasuki (uuid | ulid | gibberish | moment | naga19) [--size=<size>] [--count=<count>] [(--upper | --lower)]
       vasuki slug <value> --format=<format>
       vasuki service [--listen=<listen>]
       vasuki --version
@@ -25,6 +25,7 @@ def run():
 
     Options:
       --size=<size>                     Size of item (small, medium, large)
+      --count=<count>                   Number of items. [Default: 1]
       --upper                           Transform to upper case
       --lower                           Transform to lower case
       --format=<format>                 Format for transformations for slugs, etc.
@@ -54,7 +55,7 @@ def run():
         vasuki naga19
         Xm3k6mWq
 
-    Examples with transformations::
+    Transformations::
 
         # UUIDv4, uppercase
         vasuki uuid --upper
@@ -64,10 +65,14 @@ def run():
         vasuki ulid --lower
         01defkz01k47dqkvcyhy0mz06e
 
-    Example with variable word length::
+    Variable word length::
 
         vasuki gibberish --size medium
         schreblyiopp
+
+    Multiple tokens at once::
+
+        vasuki naga19 --count 100
 
     Slug tools::
 
@@ -100,14 +105,9 @@ def run():
         start_service(listen_address)
         return
 
-    # Run command.
-    try:
-        workload = VasukiCommand(options)
-        result = workload.run()
-    except Exception as ex:
-        message = str(ex)
-        log.error(message)
-        raise DocoptExit(message)
+    # Run command, optionally multiple times.
+    command = VasukiCommand(options)
+    results = command.run_multi()
 
-    # Output identifier to STDOUT.
-    print(result)
+    # Output identifiers to STDOUT.
+    print('\n'.join(results))

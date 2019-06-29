@@ -1,17 +1,32 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
 # Apache License, Version 2
-from munch import munchify
-
+import logging
 from vasuki import generate_uuid4, generate_ulid, generate_nagamani19, generate_gibberish, integer_slug, generate_momentname
+
+log = logging.getLogger(__name__)
 
 
 class VasukiCommand:
 
     def __init__(self, options):
         self.options = options
-    
-    def run(self):
+
+    def run_multi(self):
+        results = []
+        count = int(self.options.get('count', 1))
+        for i in range(count):
+            try:
+                result = self.run_single()
+                #log.info(f'Vasuki result: {result}')
+                results.append(result)
+            except Exception as ex:
+                message = str(ex)
+                log.exception(message)
+                raise
+        return results
+
+    def run_single(self):
 
         # Unique identifier generators
         if self.options.uuid:

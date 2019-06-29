@@ -27,3 +27,4 @@ in progress
 - Make Nagamani19 generator obtain size, mapping it to precision
 - Adjust Gibberish generator re. size parameter
 - Improve main HTML UI with metadata
+- Fix sdist package

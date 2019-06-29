@@ -6,7 +6,8 @@
 https://github.com/HowManyOliversAreThere/six-nibble-name
 """
 import time
-from vasuki import integer_slug
+
+from vasuki.format.sixnibblename.sixnibblename import integer_slug
 
 
 def generate_nibbleword():

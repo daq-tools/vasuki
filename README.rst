@@ -19,7 +19,7 @@ Vasuki
 *****
 About
 *****
-Vasuki generates different kinds of unique identifiers, tokens and words.
+Vasuki generates different kinds of random unique identifiers, tokens and words.
 
 It aims to make identifier generation effortless.
 
@@ -42,8 +42,8 @@ With service API::
 Features
 ********
 
-Generators:
-
+Unique ID generators
+====================
 - UUIDv4_ universally unique identifier
 - ULID_ universally unique lexicographically sortable identifier
 - Nagamani19, a short, unique, non-sequential identifier based on Hashids_
@@ -53,8 +53,8 @@ Generators:
 Time and randomness is usually taking from the system
 as implemented by the libraries underpinning this package.
 
-Slugifiers:
-
+Slugifiers
+==========
 - `six-nibble-name`_ converts six nibbles (three bytes) into a 4-character name
 
 Optional service API
@@ -75,17 +75,20 @@ Synopsis
 ********
 ::
 
-    # Generate UUIDv4 universally unique identifier.
+    # UUIDv4 universally unique identifier.
     vasuki uuid
 
-    # Generate ULID universally unique lexicographically sortable identifier.
+    # ULID universally unique lexicographically sortable identifier.
     vasuki ulid
 
-    # Generate Nagamani19 short, unique, non-sequential identifier.
+    # Nagamani19 short, unique, non-sequential identifier.
     vasuki naga19
 
-    # Generate random, pronounceable pseudo-words
+    # Gibberish random, pronounceable pseudo-words
     vasuki gibberish
+
+    # Nibble short names from integer slugs
+    vasuki nibble
 
 
 ********
@@ -111,7 +114,7 @@ Identifier generation
     vasuki gibberish
     shoomly
 
-    # Nibbleword
+    # Nibble name
     vasuki nibble
     Zese
 

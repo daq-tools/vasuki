@@ -1,4 +1,4 @@
-"""Vasuki generates different kinds of unique identifiers, tokens and words"""
+"""Vasuki generates different kinds of random unique identifiers, tokens and words"""
 __appname__ = 'vasuki'
 __version__ = '0.0.0'
 

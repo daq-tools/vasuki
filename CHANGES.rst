@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Fix MomentName generator on Python3.6 again
 
 2019-06-30 0.3.0
 ================

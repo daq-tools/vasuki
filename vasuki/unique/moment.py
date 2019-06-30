@@ -10,5 +10,5 @@ def generate_momentname():
     try:
         time_ns = time.time_ns()
     except:
-        time_ns = time.time() * 1000 * 1000
+        time_ns = int(time.time() * 1000 * 1000)
     return integer_slug(time_ns)

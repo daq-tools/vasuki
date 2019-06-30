@@ -51,7 +51,7 @@
         </span>
         <span class="options">
         {% for param in item.get('params', []) %}
-        <a href="./unique/{{ item.name }}?{{ param }}">[{{ param }}]</a>&nbsp;
+        <a href="./unique/{{ item.key }}?{{ param }}">[{{ param }}]</a>&nbsp;
         {% endfor %}
         </span>
     </li>

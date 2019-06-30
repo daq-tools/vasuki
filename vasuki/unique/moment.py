@@ -7,4 +7,8 @@ from vasuki.format.sixnibblename.sixnibblename import integer_slug
 
 
 def generate_momentname():
-    return integer_slug(time.time_ns())
+    try:
+        time_ns = time.time_ns()
+    except:
+        time_ns = time.time() * 1000 * 1000
+    return integer_slug(time_ns)

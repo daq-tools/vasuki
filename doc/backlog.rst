@@ -51,3 +51,5 @@ Done
 - [x] Generate more tokens at once
 - [x] UI: Embed, DOCTYPE, encoding
 - [x] Size parameter for naga19 in web ui
+- [x] ``AttributeError: module 'time' has no attribute 'time_ns'``
+  https://api.hiveeyes.org/vasuki/unique/moment

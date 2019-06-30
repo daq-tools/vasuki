@@ -5,8 +5,12 @@ Changelog
 
 in progress
 ===========
+
+2019-06-30 0.3.0
+================
 - Add Icinga2 service config object
 - Check service status after starting it
+- Fix MomentName generator on Python3.6
 
 2019-06-30 0.2.0
 ================

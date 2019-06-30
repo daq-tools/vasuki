@@ -1,0 +1,14 @@
+// Monitor availability of Vasuki with Icinga2
+object Service "Availability of Vasuki at api.example.org" {
+    check_command     = "http"
+    host_name         = "slartibartfast.example.org"
+    vars.http_ssl     = true
+    vars.http_sni     = true
+    vars.http_vhost   = "api.example.org"
+    vars.http_address = vars.http_vhost
+    vars.http_uri     = "/vasuki/"
+    vars.http_expect_body_eregi = "<title>Vasuki.*</title>"
+    vars.http_critical_time = 6
+    vars.http_warn_time = 3
+    vars.sla = "24x7"
+}

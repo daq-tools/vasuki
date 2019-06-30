@@ -5,9 +5,13 @@ Changelog
 
 in progress
 ===========
+
+2019-06-30 0.2.0
+================
 - Improve documentation
 - Add size parameter for naga19 in web ui
 - Fix linking with parameters in web ui
+- Fix footer links in web ui
 
 2019-06-30 0.1.0
 ================

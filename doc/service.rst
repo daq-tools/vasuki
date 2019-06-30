@@ -24,6 +24,9 @@ Install packages::
     # Install Vasuki.
     /opt/vasuki/bin/pip install vasuki[service] --upgrade
 
+    # Display version of Vasuki after installation / upgrade.
+    vasuki --version
+
     # Make available as global command.
     echo 'alias vasuki=/opt/vasuki/bin/vasuki' > /etc/profile.d/vasuki.sh
 
@@ -35,3 +38,6 @@ Install packages::
     # Start service and check status.
     systemctl start vasuki
     systemctl status vasuki
+
+    # Display version of Vasuki after system unit start.
+    vasuki --version

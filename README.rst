@@ -166,7 +166,11 @@ Multiple tokens at once
 
 
 HTTP API
-=========
+========
+Start the Vasuki service as daemon::
+
+    vasuki service
+
 Example requests would look like::
 
     # UUIDv4

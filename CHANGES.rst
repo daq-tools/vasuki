@@ -6,6 +6,7 @@ Changelog
 in progress
 ===========
 - Add Icinga2 service config object
+- Check service status after starting it
 
 2019-06-30 0.2.0
 ================

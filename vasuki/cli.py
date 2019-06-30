@@ -86,8 +86,10 @@ def run():
 
     """
 
+    name = f'{__appname__} {__version__}'
+
     # Parse command line arguments
-    options = normalize_options(docopt(run.__doc__, version=__appname__ + ' ' + __version__))
+    options = normalize_options(docopt(run.__doc__, version=name))
 
     # Setup logging
     debug = options.get('debug')
@@ -101,6 +103,7 @@ def run():
 
     if options.service:
         listen_address = options.listen
+        log.info(f'Starting {name}')
         log.info(f'Starting web service on {listen_address}')
         from vasuki.api import start_service
         start_service(listen_address)

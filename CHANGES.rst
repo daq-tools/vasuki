@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Improve documentation
 
 
 2019-06-30 0.1.0

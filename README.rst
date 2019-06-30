@@ -32,6 +32,13 @@ There might still be dragons.
 *******
 Install
 *******
+
+Prerequisites
+=============
+::
+
+    pip install 'https://github.com/greghaskins/gibberish/tarball/3ec39861#egg=gibberish-0.3'
+
 ::
 
     pip install vasuki

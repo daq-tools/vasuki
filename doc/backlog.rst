@@ -4,11 +4,18 @@ Backlog
 
 Tasks
 =====
+
+Prio 1
+------
+- [o] Size parameter for naga19 in web ui
+- [o] Trim down example on ``vasuki --help`` and refer to GitHub page
+
+Prio 2
+------
 - [o] Implement ``--size`` for ``MomentName``
 - [o] Clamp maximum number of tokens generated at once
 - [o] Add rate limiting
 - [o] UI: Buttons
-- [o] Trim down example on ``vasuki --help`` and refer to GitHub page
 
 Generators
 ==========

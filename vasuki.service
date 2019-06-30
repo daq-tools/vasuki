@@ -1,23 +1,21 @@
+#
+# Systemd unit file for Vasuki
+#
+# Install and activate service on server machine.
+# https://github.com/daq-tools/vasuki/blob/master/doc/service.rst
+#
+
 [Unit]
 Description=Vasuki - random unique identifiers, tokens and words
 Documentation=https://github.com/daq-tools/vasuki
 After=network.target
 
-# Install service on server machine.
-# virtualenv /opt/vasuki
-# /opt/vasuki/bin/pip install vasuki[service]
-
-# Make available as global command.
-# echo 'alias vasuki=/opt/vasuki/bin/vasuki' > /etc/profile.d/vasuki.sh
-
 [Service]
 User=daemon
 Group=daemon
 LimitNOFILE=65536
-Environment='STDOUT=/var/log/vasuki.log'
-Environment='STDERR=/var/log/vasuki.log'
 EnvironmentFile=-/etc/default/vasuki
-ExecStart=/bin/sh -c "/opt/vasuki/bin/vasuki service --listen=localhost:24641 ${VASUKI_OPTS} >>${STDOUT} 2>>${STDERR}"
+ExecStart=/bin/sh -c "/opt/vasuki/bin/vasuki service --listen=localhost:24641 ${VASUKI_OPTS}"
 KillMode=control-group
 Restart=on-failure
 

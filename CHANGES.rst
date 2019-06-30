@@ -6,7 +6,7 @@ Changelog
 in progress
 ===========
 - Improve documentation
-
+- Add size parameter for naga19 in web ui
 
 2019-06-30 0.1.0
 ================

@@ -7,7 +7,6 @@ Tasks
 
 Prio 1
 ------
-- [o] Size parameter for naga19 in web ui
 - [o] Trim down example on ``vasuki --help`` and refer to GitHub page
 
 Prio 2
@@ -51,3 +50,4 @@ Done
 - [x] Rename wordlength to wordsize
 - [x] Generate more tokens at once
 - [x] UI: Embed, DOCTYPE, encoding
+- [x] Size parameter for naga19 in web ui

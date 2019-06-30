@@ -43,6 +43,7 @@ async def vasuki_index(request, response):
         {
             'key': 'naga19',
             'name': 'Nagamani19',
+            'params': ['size=small', 'size=medium', 'size=large'],
             'description': 'short, unique, non-sequential identifier',
         },
     ])

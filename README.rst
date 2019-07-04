@@ -29,6 +29,18 @@ It aims to make identifier generation effortless.
 There might still be dragons.
 
 
+**********
+Disclaimer
+**********
+The algorithms curated here generate different kinds of random and
+pseudo-random identifiers, tokens, names or passwords, let's just call
+them "prwords". While some of the generated "prwords" max out on the
+randomness and uniqueness aspects like UUIDs, others compromise on the
+time vs. space domain but focus more on human memorability and empathize
+with their common sense and humor. Saying that, humans should know what
+they are doing when using these identifiers in different contexts. YMMV.
+
+
 *******
 Install
 *******
@@ -205,7 +217,7 @@ or turtle to support the foundation of the cosmos, while the gods and demons
 churn the cosmic ocean with the help of serpent Vasuki_ to produce the nectar
 of immortality.
 
-Vasuki is a serpent king, occasionally coiling around Kurma's or Shiva's
+Vasuki is a naga serpent king, occasionally coiling around Kurma's or Shiva's
 neck, who blessed and wore him as an ornament. He is described as having
 a gem called Nagamani on his head.
 

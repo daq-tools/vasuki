@@ -11,6 +11,7 @@ in progress
 - Start using ``gibberish==0.4.0`` from PyPI.
   Thanks, @greghaskins, @adamchainz and @ddalex.
   https://github.com/greghaskins/gibberish/issues/8
+- Improve documentation
 
 2019-06-30 0.3.1
 ================

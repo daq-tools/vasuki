@@ -33,7 +33,7 @@ async def vasuki_index(request, response):
             'key': 'gibberish',
             'name': 'Gibberish',
             'params': ['size=small', 'size=medium', 'size=large'],
-            'description': 'random, pronounceable pseudo-words',
+            'description': 'random, pronounceable pseudo-word',
         },
         {
             'key': 'moment',

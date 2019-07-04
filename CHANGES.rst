@@ -6,6 +6,12 @@ Changelog
 in progress
 ===========
 
+2019-07-04 0.3.2
+================
+- Start using ``gibberish==0.4.0`` from PyPI.
+  Thanks, @greghaskins, @adamchainz and @ddalex.
+  https://github.com/greghaskins/gibberish/issues/8
+
 2019-06-30 0.3.1
 ================
 - Fix MomentName generator on Python3.6 again

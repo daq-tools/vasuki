@@ -56,7 +56,7 @@ setup(name='vasuki',
           'munch==2.3.2',
           'ulid-py==0.0.9',
           'hashids==1.2.0',
-          'gibberish==0.3',
+          'gibberish==0.4.0',
           #'correct-horse==0.3.1',
           #'flufl.i18n==1.1.3',
       ],
@@ -65,9 +65,6 @@ setup(name='vasuki',
               'responder==1.3.1',
           ],
       },
-      dependency_links=[
-          'https://github.com/greghaskins/gibberish/tarball/3ec39861#egg=gibberish-0.3',
-      ],
       entry_points={
           'console_scripts': [
               'vasuki = vasuki.cli:run',

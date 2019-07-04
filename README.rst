@@ -37,10 +37,6 @@ Prerequisites
 =============
 ::
 
-    pip install 'https://github.com/greghaskins/gibberish/tarball/3ec39861#egg=gibberish-0.3'
-
-::
-
     pip install vasuki
 
 With service API::

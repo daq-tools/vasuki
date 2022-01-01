@@ -1,11 +1,18 @@
-.. image:: https://img.shields.io/badge/Python-3-green.svg
-    :target: https://github.com/daq-tools/vasuki
-
-.. image:: https://img.shields.io/pypi/v/vasuki.svg
+.. image:: https://img.shields.io/pypi/pyversions/vasuki.svg
+    :alt: Supported versions of Python
     :target: https://pypi.org/project/vasuki/
 
-.. image:: https://img.shields.io/github/tag/daq-tools/vasuki.svg
-    :target: https://github.com/daq-tools/vasuki
+.. image:: https://img.shields.io/pypi/v/vasuki.svg
+    :alt: Version on PyPI
+    :target: https://pypi.org/project/vasuki/
+
+.. image:: https://img.shields.io/pypi/status/vasuki.svg
+    :alt: Status
+    :target: https://pypi.org/project/vasuki/
+
+.. image:: https://img.shields.io/pypi/l/vasuki.svg
+    :alt: License
+    :target: https://pypi.org/project/vasuki/
 
 |
 
@@ -192,6 +199,17 @@ Example requests would look like::
 
     # Very short Nagamani19
     /unique/naga19?size=small
+
+
+***********
+Development
+***********
+::
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install --editable=.[service]
+    vasuki --version
 
 
 *******

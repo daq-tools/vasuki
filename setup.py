@@ -12,9 +12,10 @@ setup(name='vasuki',
       license="AGPL 3, EUPL 1.2",
       classifiers=[
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
@@ -62,7 +63,8 @@ setup(name='vasuki',
       ],
       extras_require={
           'service': [
-              'responder==1.3.1',
+              'responder>=1,<3',
+              'typesystem==0.2.5',
           ],
       },
       entry_points={

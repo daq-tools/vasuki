@@ -8,6 +8,13 @@ Tasks
 
 Prio 1
 ------
+- [o] Add compatibility with recent versions of ``typesystem`` (vs. ``responder``/``apistar```
+    - https://github.com/taoufik07/responder/pull/430
+    - https://github.com/taoufik07/responder/issues/440
+    - https://github.com/encode/apistar/pull/675
+
+Prio 1.5
+--------
 - [o] Trim down example on ``vasuki --help`` but refer to
   GitHub page and/or live instance.
 - [o] Add Disclaimer to index.html

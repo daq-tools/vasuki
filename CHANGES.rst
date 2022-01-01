@@ -5,6 +5,9 @@ Changelog
 
 in progress
 ===========
+
+2022-01-01 0.3.3
+================
 - Add compatibility with recent versions of Python
 
 2019-07-04 0.3.2

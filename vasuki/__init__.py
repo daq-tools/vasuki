@@ -1,6 +1,6 @@
 """Vasuki generates different kinds of random unique identifiers, tokens and words"""
 __appname__ = 'vasuki'
-__version__ = '0.3.2'
+__version__ = '0.3.3'
 
 from vasuki.unique.uuid import generate_uuid4
 from vasuki.unique.ulid import generate_ulid

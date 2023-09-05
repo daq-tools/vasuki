@@ -13,6 +13,10 @@ Prio 1
     - https://github.com/taoufik07/responder/issues/440
     - https://github.com/encode/apistar/pull/675
 
+Understanding UUIDs, ULIDs and String Representations
+- https://sudhir.io/uuids-ulids
+- https://news.ycombinator.com/item?id=29794186
+
 Prio 1.5
 --------
 - [o] Trim down example on ``vasuki --help`` but refer to

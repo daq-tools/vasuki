@@ -5,6 +5,9 @@ Changelog
 
 in progress
 ===========
+
+2023-09-06 0.3.4
+================
 - Update dependencies: Munch
 
 2022-01-01 0.3.3

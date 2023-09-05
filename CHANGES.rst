@@ -6,6 +6,11 @@ Changelog
 in progress
 ===========
 
+2023-09-06 0.4.0
+================
+- Nagamani: Refactoring
+- Nagamani: Add ``generate_nagamani19_int``
+
 2023-09-06 0.3.4
 ================
 - Update dependencies: Munch

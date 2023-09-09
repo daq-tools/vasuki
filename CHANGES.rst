@@ -5,6 +5,8 @@ Changelog
 
 in progress
 ===========
+- Fix and adjust Naga19 implementation.
+  Use "medium" size as default, which is millisecond granularity.
 
 2023-09-09 0.6.0
 ================

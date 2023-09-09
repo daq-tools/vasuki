@@ -41,6 +41,8 @@
 
 <h1>Vasuki - random unique identifiers, tokens, and words</h1>
 
+<!-- Main section -->
+<h2>Overview</h2>
 <ul>
     {% for item in index %}
     <li>
@@ -58,14 +60,43 @@
     {% endfor %}
 </ul>
 
-<hr/>
+<!-- Disclaimer section -->
+<h2>Disclaimer</h2>
+<p>
+  The algorithms and procedures curated here generate different kinds of random and
+  pseudo-random identifiers, tokens, names or passwords.
+</p>
+<p>
+  While some generated tokens max out on the randomness and uniqueness
+  aspects like UUIDs, others compromise on the time vs. space domain but focus
+  more on human memorability and empathize with their common sense and humor.
+</p>
+<p>
+  Saying that, it is important to understand their properties and features when using
+  those identifiers in different contexts. YMMV.
+  Further information about this topic can be found in the project's
+  <a href="https://github.com/daq-tools/vasuki/blob/main/README.rst">README</a> document.
+</p>
 
+<!-- Warranty and License section -->
+<h2>Warranty and License</h2>
+<p>
+  Please refer to the <a href="https://github.com/daq-tools/vasuki/blob/main/LICENSE">LICENSE</a>
+  file for further information and caveats about warranty and licensing information.
+  <br/>
+  You are responsible for using this software responsibly, it comes without warranty of any kind.
+</p>
+
+<!-- Footer section -->
+<hr/>
 <small>
     <a target="_blank" href="https://github.com/daq-tools/vasuki">Vasuki on GitHub</a>
     |
     <a target="_blank" href="https://pypi.org/project/vasuki/">Vasuki on PyPI</a>
     |
-    Install: <pre>pip install vasuki</pre>
+    Software version: {{ vasuki_version }}
+    |
+    Install: <pre>pip install 'vasuki[service]'</pre>
 </small>
 
 <br/><br/>

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
+import importlib.metadata
 import logging
 import responder
 from munch import DefaultMunch, munchify
@@ -50,7 +51,8 @@ async def vasuki_index(request, response):
     cache_bust = False
     #cache_bust = time.time_ns()
 
-    response.html = api.template('index.html', index=index, cache_bust=cache_bust)
+    vasuki_version = importlib.metadata.version("vasuki")
+    response.html = api.template('index.html', index=index, cache_bust=cache_bust, vasuki_version=vasuki_version)
 
 
 @api.route("/unique/{kind}")

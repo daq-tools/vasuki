@@ -14,3 +14,7 @@ li {
 pre {
     display: inline;
 }
+
+p {
+    width: 50em;
+}

@@ -8,7 +8,11 @@ Tasks
 
 Prio 1
 ------
-- [o] Add compatibility with recent versions of ``typesystem`` (vs. ``responder``/``apistar```
+- [o] Add version number to ``index.html``
+- [o] Add software tests for ``vasuki service``
+- [o] Provide OCI image
+- [o] Add license/warranty information to README and ``index.html``
+- [o] Add compatibility with recent versions of ``typesystem`` (vs. ``responder``/``apistar``)
     - https://github.com/taoufik07/responder/pull/430
     - https://github.com/taoufik07/responder/issues/440
     - https://github.com/encode/apistar/pull/675

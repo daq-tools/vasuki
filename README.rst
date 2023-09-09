@@ -28,7 +28,7 @@
 |
 
 .. figure:: https://ptrace.hiveeyes.org/2019-06-29_vasuki-small.jpg
-    :target: https://en.wikipedia.org/wiki/Vasuki#/media/File:Kurma,_the_tortoise_incarnation_of_Vishnu.jpg
+    :target: https://en.wikipedia.org/wiki/File:Kurma,_the_tortoise_incarnation_of_Vishnu.jpg
 
 
 .. vasuki-readme:
@@ -43,8 +43,30 @@ About
 *****
 
 Vasuki generates different kinds of random unique identifiers, tokens, and words.
+
 It can be used as a library and as an HTTP service, aiming to provide effortless
 identifier generation for your applications.
+
+
+********
+Synopsis
+********
+::
+
+    # UUIDv4 universally unique identifier.
+    vasuki uuid
+
+    # ULID universally unique lexicographically sortable identifier.
+    vasuki ulid
+
+    # Gibberish random, pronounceable pseudo-words
+    vasuki gibberish
+
+    # MomentName short epoch slugs
+    vasuki moment
+
+    # Nagamani19 short, unique, non-sequential identifier.
+    vasuki naga19
 
 
 *******
@@ -60,6 +82,10 @@ Prerequisites
 With service API::
 
     pip install 'vasuki[service]'
+
+Please note this software is a work in progress, and its interfaces may change.
+For those reasons, if you use it as a dependency in your own programs, version
+pinning is always recommended.
 
 
 ********
@@ -84,7 +110,7 @@ Slugifiers
 
 Optional service API
 ====================
-The fine responder_ optionally exposes the machinery as HTTP API.
+The fine responder_ library optionally exposes the machinery as HTTP API.
 
 .. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _ULID: https://github.com/ulid/spec
@@ -92,27 +118,6 @@ The fine responder_ optionally exposes the machinery as HTTP API.
 .. _Gibberish: https://github.com/greghaskins/gibberish
 .. _six-nibble-name: https://github.com/HowManyOliversAreThere/six-nibble-name
 .. _responder: https://pypi.org/project/responder/
-
-
-********
-Synopsis
-********
-::
-
-    # UUIDv4 universally unique identifier.
-    vasuki uuid
-
-    # ULID universally unique lexicographically sortable identifier.
-    vasuki ulid
-
-    # Gibberish random, pronounceable pseudo-words
-    vasuki gibberish
-
-    # MomentName short epoch slugs
-    vasuki moment
-
-    # Nagamani19 short, unique, non-sequential identifier.
-    vasuki naga19
 
 
 ********

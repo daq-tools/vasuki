@@ -7,7 +7,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 setup(name='vasuki',
       version='0.4.0',
-      description='Vasuki generates different kinds of random unique identifiers, tokens and words',
+      description='Vasuki generates different kinds of random unique identifiers, tokens, and words',
       long_description=README,
       license="MIT",
       classifiers=[

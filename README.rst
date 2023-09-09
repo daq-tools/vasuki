@@ -37,7 +37,7 @@ Vasuki
 About
 *****
 
-Vasuki generates different kinds of random unique identifiers, tokens and words.
+Vasuki generates different kinds of random unique identifiers, tokens, and words.
 It can be used as a library and as an HTTP service, aiming to provide effortless
 identifier generation for your applications.
 

@@ -18,15 +18,15 @@ def generate_nagamani19_obj(size=None) -> Nagamani:
 
 def generate_nagamani19(size=None) -> str:
     warnings.warn(DeprecationWarning("The function `generate_nagamani19` is deprecated. Please use `generate_nagamani19_hash` instead."))
-    return generate_nagamani19_obj().hash()
+    return generate_nagamani19_obj(size=size).hash()
 
 
 def generate_nagamani19_hash(size=None) -> str:
-    return generate_nagamani19_obj().hash()
+    return generate_nagamani19_obj(size=size).hash()
 
 
 def generate_nagamani19_int(size=None) -> int:
-    return generate_nagamani19_obj().duration()
+    return generate_nagamani19_obj(size=size).duration()
 
 
 def get_precision(selector):

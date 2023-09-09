@@ -1,23 +1,30 @@
+.. image:: https://github.com/daq-tools/vasuki/actions/workflows/main.yml/badge.svg
+    :target: https://github.com/daq-tools/vasuki/actions/workflows/main.yml
+
 .. image:: https://img.shields.io/pypi/pyversions/vasuki.svg
     :alt: Supported versions of Python
+    :target: https://pypi.org/project/vasuki/
+
+.. image:: https://img.shields.io/pypi/status/vasuki.svg
+    :alt: PyPI Status
     :target: https://pypi.org/project/vasuki/
 
 .. image:: https://img.shields.io/pypi/v/vasuki.svg
     :alt: Version on PyPI
     :target: https://pypi.org/project/vasuki/
 
-.. image:: https://img.shields.io/pypi/status/vasuki.svg
-    :alt: Status
+.. image:: https://pepy.tech/badge/vasuki/month
     :target: https://pypi.org/project/vasuki/
 
 .. image:: https://img.shields.io/pypi/l/vasuki.svg
     :alt: License
-    :target: https://pypi.org/project/vasuki/
+    :target: https://github.com/daq-tools/vasuki/blob/main/LICENSE
 
 |
 
 .. figure:: https://ptrace.hiveeyes.org/2019-06-29_vasuki-small.jpg
     :target: https://en.wikipedia.org/wiki/Vasuki#/media/File:Kurma,_the_tortoise_incarnation_of_Vishnu.jpg
+
 
 .. vasuki-readme:
 
@@ -29,23 +36,25 @@ Vasuki
 *****
 About
 *****
+
 Vasuki generates different kinds of random unique identifiers, tokens and words.
-
-It aims to make identifier generation effortless.
-
-There might still be dragons.
+It can be used as a library and as an HTTP service, aiming to provide effortless
+identifier generation for your applications.
 
 
 **********
 Disclaimer
 **********
-The algorithms curated here generate different kinds of random and
-pseudo-random identifiers, tokens, names or passwords, let's just call
-them "prwords". While some of the generated "prwords" max out on the
-randomness and uniqueness aspects like UUIDs, others compromise on the
-time vs. space domain but focus more on human memorability and empathize
-with their common sense and humor. Saying that, humans should know what
-they are doing when using these identifiers in different contexts. YMMV.
+
+The algorithms and procedures curated here generate different kinds of random and
+pseudo-random identifiers, tokens, names or passwords.
+
+While some of the generated tokens max out on the randomness and uniqueness
+aspects like UUIDs, others compromise on the time vs. space domain but focus
+more on human memorability and empathize with their common sense and humor.
+
+Saying that, you should know what about their properties and features when using
+those identifiers in different contexts. YMMV.
 
 
 *******
@@ -60,7 +69,7 @@ Prerequisites
 
 With service API::
 
-    pip install vasuki[service]
+    pip install 'vasuki[service]'
 
 
 ********
@@ -129,6 +138,7 @@ Identifier generation
     d192b464-d32c-48f1-9c23-0fe04a4e8133
 
     # ULID
+    vasuki ulid
     01DEFKXYCJ0E91DQY0YPWZY01D
 
     # Gibberish
@@ -204,12 +214,22 @@ Example requests would look like::
 ***********
 Development
 ***********
-::
+
+Acquire sources::
+
+    git clone https://github.com/daq-tools/vasuki
+    cd vasuki
+
+Install development sandbox::
 
     python3 -m venv .venv
     source .venv/bin/activate
-    pip install --editable=.[service]
+    pip install --editable=.[develop,docs,test]
     vasuki --version
+
+Run linter and software tests::
+
+    poe check
 
 
 *******

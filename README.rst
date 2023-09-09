@@ -47,6 +47,8 @@ Vasuki generates different kinds of random unique identifiers, tokens, and words
 It can be used as a library and as an HTTP service, aiming to provide effortless
 identifier generation for your applications.
 
+A public instance of the HTTP service is available at https://api.hiveeyes.org/vasuki/.
+
 
 ********
 Synopsis
@@ -112,12 +114,6 @@ Optional service API
 ====================
 The fine responder_ library optionally exposes the machinery as HTTP API.
 
-.. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
-.. _ULID: https://github.com/ulid/spec
-.. _Hashids: https://hashids.org/
-.. _Gibberish: https://github.com/greghaskins/gibberish
-.. _six-nibble-name: https://github.com/HowManyOliversAreThere/six-nibble-name
-.. _responder: https://pypi.org/project/responder/
 
 
 ********
@@ -219,7 +215,7 @@ Install development sandbox::
 
     python3 -m venv .venv
     source .venv/bin/activate
-    pip install --editable=.[develop,docs,test]
+    pip install --editable='.[service,develop,docs,test]'
     vasuki --version
 
 Run linter and software tests::
@@ -234,12 +230,23 @@ Disclaimer
 The algorithms and procedures curated here generate different kinds of random and
 pseudo-random identifiers, tokens, names or passwords.
 
-While some of the generated tokens max out on the randomness and uniqueness
+While some generated tokens max out on the randomness and uniqueness
 aspects like UUIDs, others compromise on the time vs. space domain but focus
 more on human memorability and empathize with their common sense and humor.
 
-Saying that, you should know what about their properties and features when using
+Saying that, it is important to understand their properties and features when using
 those identifiers in different contexts. YMMV.
+
+For more in-depth information, enjoy reading `Understanding UUIDs, ULIDs and String
+Representations`_ and its `corresponding discussion`_.
+
+Warranty and License
+====================
+Please refer to the `LICENSE`_ file for further information and caveats about
+warranty and licensing information.
+
+You are responsible for using this software responsibly, it comes without
+warranty of any kind.
 
 
 *******
@@ -253,7 +260,6 @@ Credits
 - Mozilla for `Zilla Slab`_
 - Vasuki Logo from https://en.wikipedia.org/wiki/Vasuki
 
-.. _Zilla Slab: https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/
 
 
 *********
@@ -269,6 +275,17 @@ Vasuki is a naga serpent king, occasionally coiling around Kurma's or Shiva's
 neck, who blessed and wore him as an ornament. He is described as having
 a gem called Nagamani on his head.
 
+
+.. _corresponding discussion: https://news.ycombinator.com/item?id=29794186
+.. _Gibberish: https://github.com/greghaskins/gibberish
+.. _Hashids: https://hashids.org/
 .. _Kurma: https://en.wikipedia.org/wiki/Kurma
-.. _Vishnu: https://en.wikipedia.org/wiki/Vishnu
+.. _LICENSE: https://github.com/daq-tools/vasuki/blob/main/LICENSE
+.. _responder: https://pypi.org/project/responder/
+.. _six-nibble-name: https://github.com/HowManyOliversAreThere/six-nibble-name
+.. _ULID: https://github.com/ulid/spec
+.. _Understanding UUIDs, ULIDs and String Representations: https://sudhir.io/uuids-ulids
+.. _UUIDv4: https://en.wikipedia.org/wiki/Universally_unique_identifier
 .. _Vasuki: https://en.wikipedia.org/wiki/Vasuki
+.. _Vishnu: https://en.wikipedia.org/wiki/Vishnu
+.. _Zilla Slab: https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/

@@ -69,7 +69,7 @@ setup(name='vasuki',
           ],
           'service': [
               'responder>=1,<3',
-              'typesystem==0.2.5',
+              'typesystem<0.3',
           ],
           'test': [
               'pytest<8',

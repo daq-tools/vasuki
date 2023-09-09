@@ -6,7 +6,7 @@
 #
 
 [Unit]
-Description=Vasuki - random unique identifiers, tokens and words
+Description=Vasuki - random unique identifiers, tokens, and words
 Documentation=https://github.com/daq-tools/vasuki
 After=network.target
 

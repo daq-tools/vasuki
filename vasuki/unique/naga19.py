@@ -30,5 +30,5 @@ def generate_nagamani19_int(size=None) -> int:
 
 
 def get_precision(selector):
-    selector = selector or 'large'
+    selector = selector or 'medium'
     return size_map[selector]

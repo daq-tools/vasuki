@@ -1,5 +1,7 @@
 *.pyc
 *.egg-info
+/.coverage
 /.idea
 /.venv*
+/coverage.xml
 /dist

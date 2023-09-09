@@ -62,9 +62,19 @@ setup(name='vasuki',
           #'flufl.i18n==1.1.3',
       ],
       extras_require={
+          'develop': [
+              'build<2',
+              'bump2version==1.0.1',
+              'poethepoet<0.23',
+              'twine<5',
+          ],
           'service': [
               'responder>=1,<3',
               'typesystem==0.2.5',
+          ],
+          'test': [
+              'pytest<8',
+              'pytest-cov<5',
           ],
       },
       entry_points={

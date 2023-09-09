@@ -1,0 +1,42 @@
+[tool.coverage.run]
+branch = false
+omit = [
+  "tests/*",
+]
+source = ["vasuki"]
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "-rA --verbosity=3 --cov --cov-report=term-missing --cov-report=xml"
+minversion = "2.0"
+log_level = "DEBUG"
+log_cli_level = "DEBUG"
+log_format = "%(asctime)-15s [%(name)-24s] %(levelname)-8s: %(message)s"
+testpaths = [
+  "vasuki",
+  "tests",
+]
+xfail_strict = true
+markers = [
+]
+
+
+# ===================
+# Tasks configuration
+# ===================
+
+[tool.poe.tasks]
+
+check = [
+  "test",
+]
+
+release = [
+  { cmd = "python -m build" },
+  { cmd = "twine upload --skip-existing --verbose dist/*" },
+]
+
+test = { cmd = "pytest" }

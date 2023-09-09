@@ -52,4 +52,4 @@ build-and-upload:
 	$(poe) release
 
 setup-sandbox: setup-virtualenv
-	@$(pip) install --quiet --editable --upgrade '.[develop,docs,test]'
+	@$(pip) install --quiet --upgrade --editable='.[develop,docs,test]'

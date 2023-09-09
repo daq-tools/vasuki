@@ -41,6 +41,7 @@ def run():
         d192b464-d32c-48f1-9c23-0fe04a4e8133
 
         # ULID
+        vasuki ulid
         01DEFKXYCJ0E91DQY0YPWZY01D
 
         # Gibberish
@@ -99,7 +100,7 @@ def run():
     setup_logging(log_level)
 
     # Debugging
-    log.debug('Options: {}'.format(json.dumps(options, indent=4)))
+    # log.debug('Options: {}'.format(json.dumps(options, indent=4)))
 
     if options.service:
         listen_address = options.listen

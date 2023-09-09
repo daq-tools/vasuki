@@ -8,18 +8,11 @@ Tasks
 
 Prio 1
 ------
-- [o] Add version number to ``index.html``
-- [o] Add software tests for ``vasuki service``
 - [o] Provide OCI image
-- [o] Add license/warranty information to README and ``index.html``
 - [o] Add compatibility with recent versions of ``typesystem`` (vs. ``responder``/``apistar``)
     - https://github.com/taoufik07/responder/pull/430
     - https://github.com/taoufik07/responder/issues/440
     - https://github.com/encode/apistar/pull/675
-
-Understanding UUIDs, ULIDs and String Representations
-- https://sudhir.io/uuids-ulids
-- https://news.ycombinator.com/item?id=29794186
 
 Prio 1.5
 --------

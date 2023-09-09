@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Improve service subsystem and add software tests
 
 2023-09-09 0.5.0
 ================

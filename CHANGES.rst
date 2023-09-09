@@ -5,6 +5,9 @@ Changelog
 
 in progress
 ===========
+
+2023-09-09 0.5.0
+================
 - Add software tests and CI configuration
 - Change license to MIT
 - Update dependencies ulid-py, hashids, and gibberish

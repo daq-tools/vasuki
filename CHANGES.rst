@@ -5,6 +5,9 @@ Changelog
 
 in progress
 ===========
+
+2023-09-09 0.6.0
+================
 - Improve service subsystem and add software tests
 - Limit support to Python 3.8, 3.9, and 3.10
   The ``responder`` library currently does not install on Python 3.11.

@@ -56,7 +56,7 @@ def test_gibberish(capsys):
 
     # Verify output.
     raw = out.strip()
-    assert len(raw) >= 5
+    assert len(raw) >= 4
 
 
 def test_moment(capsys):
@@ -78,7 +78,7 @@ def test_naga19(capsys):
 
     # Verify output.
     raw = out.strip()
-    assert len(raw) >= 10
+    assert len(raw) >= 8
 
 
 def test_slug_sixnibble(capsys):

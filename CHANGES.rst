@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Add software tests and CI configuration
 
 2023-09-06 0.4.0
 ================

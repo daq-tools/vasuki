@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
 import logging
-from vasuki import generate_uuid4, generate_ulid, generate_nagamani19, generate_gibberish, integer_slug, generate_momentname
+from vasuki import generate_uuid4, generate_ulid, generate_nagamani19_hash, generate_gibberish, integer_slug, generate_momentname
 
 log = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ class VasukiCommand:
             result = generate_ulid()
 
         elif self.options.naga19:
-            result = generate_nagamani19(size=self.options.size)
+            result = generate_nagamani19_hash(size=self.options.size)
 
         elif self.options.gibberish:
             result = generate_gibberish(size=self.options.size)

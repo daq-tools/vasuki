@@ -7,6 +7,7 @@ in progress
 ===========
 - Add software tests and CI configuration
 - Change license to MIT
+- Update dependencies ulid-py, hashids, and gibberish
 
 2023-09-06 0.4.0
 ================

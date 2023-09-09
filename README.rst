@@ -1,5 +1,10 @@
 .. image:: https://github.com/daq-tools/vasuki/actions/workflows/main.yml/badge.svg
+    :alt: Software test outcome
     :target: https://github.com/daq-tools/vasuki/actions/workflows/main.yml
+
+.. image:: https://img.shields.io/codecov/c/gh/daq-tools/vasuki.svg
+    :alt: Software tests code coverage
+    :target: https://codecov.io/gh/daq-tools/vasuki/
 
 .. image:: https://img.shields.io/pypi/pyversions/vasuki.svg
     :alt: Supported versions of Python
@@ -40,21 +45,6 @@ About
 Vasuki generates different kinds of random unique identifiers, tokens, and words.
 It can be used as a library and as an HTTP service, aiming to provide effortless
 identifier generation for your applications.
-
-
-**********
-Disclaimer
-**********
-
-The algorithms and procedures curated here generate different kinds of random and
-pseudo-random identifiers, tokens, names or passwords.
-
-While some of the generated tokens max out on the randomness and uniqueness
-aspects like UUIDs, others compromise on the time vs. space domain but focus
-more on human memorability and empathize with their common sense and humor.
-
-Saying that, you should know what about their properties and features when using
-those identifiers in different contexts. YMMV.
 
 
 *******
@@ -230,6 +220,21 @@ Install development sandbox::
 Run linter and software tests::
 
     poe check
+
+
+**********
+Disclaimer
+**********
+
+The algorithms and procedures curated here generate different kinds of random and
+pseudo-random identifiers, tokens, names or passwords.
+
+While some of the generated tokens max out on the randomness and uniqueness
+aspects like UUIDs, others compromise on the time vs. space domain but focus
+more on human memorability and empathize with their common sense and humor.
+
+Saying that, you should know what about their properties and features when using
+those identifiers in different contexts. YMMV.
 
 
 *******

@@ -66,7 +66,7 @@ setup(name='vasuki',
           'develop': [
               'build<2',
               'bump2version==1.0.1',
-              'poethepoet<0.23',
+              'poethepoet<0.24',
               'twine<5',
           ],
           'service': [

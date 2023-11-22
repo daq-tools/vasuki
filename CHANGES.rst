@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Verify support for Python 3.8 and 3.12
 
 2023-09-09 0.7.0
 ================

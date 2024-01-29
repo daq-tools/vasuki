@@ -76,7 +76,7 @@ setup(name='vasuki',
               'typesystem<0.5',
           ],
           'test': [
-              'pytest<8',
+              'pytest<9',
               'pytest-cov<5',
           ],
       },

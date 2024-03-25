@@ -77,7 +77,7 @@ setup(name='vasuki',
           ],
           'test': [
               'pytest<9',
-              'pytest-cov<5',
+              'pytest-cov<6',
           ],
       },
       entry_points={

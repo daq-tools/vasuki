@@ -72,10 +72,11 @@ setup(name='vasuki',
               'twine<6',
           ],
           'service': [
-              'responder @ git+https://github.com/kennethreitz/responder.git@12a9b8a471',
-              'typesystem<0.5',
+              'responder @ git+https://github.com/kennethreitz/responder.git@e9613500daf',
+              'typesystem<0.3',
           ],
           'test': [
+              'httpx<0.28',
               'pytest<9',
               'pytest-cov<6',
           ],

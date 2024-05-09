@@ -1,5 +1,9 @@
 import uuid
 
+import pytest
+
+pytest.importorskip("responder")
+
 
 def test_index(api):
     r = api.requests.get("/")

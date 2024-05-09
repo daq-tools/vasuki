@@ -23,7 +23,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        python-version: ["3.8", "3.12"]
+        python-version: ["3.8", "3.11", "3.12"]
 
     env:
       OS: ${{ matrix.os }}
@@ -53,7 +53,14 @@ jobs:
         pip install "setuptools>=64" --upgrade
 
         # Install package in editable mode.
-        pip install --use-pep517 --prefer-binary --editable=.[service,develop,docs,test]
+        pip install --use-pep517 --prefer-binary --editable=.[develop,test]
+
+    - name: Setup "service" extra
+      if: matrix.python-version != '3.8' && matrix.python-version != '3.9' && matrix.python-version != '3.10'
+      run: |
+
+        # Install package in editable mode.
+        pip install --use-pep517 --prefer-binary --editable=.[service]
 
     - name: Run linter and software tests
       run: |

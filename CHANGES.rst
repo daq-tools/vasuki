@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Fix dependencies, using vanilla ``responder`` package from PyPI
 
 2024-05-10 0.7.1
 ================

@@ -72,8 +72,7 @@ setup(name='vasuki',
               'twine<7',
           ],
           'service': [
-              'responder @ git+https://github.com/kennethreitz/responder.git@e9613500daf',
-              'typesystem<0.3',
+              'responder>=3.0.0.dev0',
           ],
           'test': [
               'httpx<0.29',

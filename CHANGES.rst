@@ -5,7 +5,11 @@ Changelog
 
 in progress
 ===========
+
+2024-05-10 0.7.1
+================
 - Verify support for Python 3.8 and 3.12
+- Fix dependency reference to ``responder``
 
 2023-09-09 0.7.0
 ================

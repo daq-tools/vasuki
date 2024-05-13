@@ -73,7 +73,7 @@ setup(name='vasuki',
           ],
           'service': [
               'responder @ git+https://github.com/kennethreitz/responder.git@e9613500daf',
-              'typesystem<0.3',
+              'typesystem<0.5',
           ],
           'test': [
               'httpx<0.28',

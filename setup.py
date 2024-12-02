@@ -76,7 +76,7 @@ setup(name='vasuki',
               'typesystem<0.3',
           ],
           'test': [
-              'httpx<0.28',
+              'httpx<0.29',
               'pytest<9',
               'pytest-cov<7',
           ],

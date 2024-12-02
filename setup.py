@@ -69,7 +69,7 @@ setup(name='vasuki',
               'build<2',
               'bump2version==1.0.1',
               'poethepoet<0.33',
-              'twine<6',
+              'twine<7',
           ],
           'service': [
               'responder @ git+https://github.com/kennethreitz/responder.git@e9613500daf',

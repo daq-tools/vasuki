@@ -21,7 +21,7 @@ def test_cli_failure():
         run()
 
     # Verify output.
-    assert ex.match("Usage:\n      vasuki")
+    assert ex.match("Usage:\n.*vasuki")
 
 
 def test_uuid(capsys):

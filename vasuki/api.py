@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # (c) 2019 Andreas Motl <andreas@terkin.org>
 import importlib.metadata
+import importlib.resources
 import logging
 import responder
 from munch import DefaultMunch, munchify
-from pkg_resources import resource_filename
 from vasuki.core import VasukiCommand
 
-templates_dir = resource_filename('vasuki', 'templates')
+with importlib.resources.path('vasuki', 'templates') as vasuki_templates:
+    templates_dir = vasuki_templates
 api = responder.API(static_dir=templates_dir, templates_dir=templates_dir)
 
 

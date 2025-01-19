@@ -57,7 +57,7 @@ setup(name='vasuki',
       zip_safe=False,
       test_suite='vasuki.test',
       install_requires=[
-          'docopt<1',
+          'docopt-ng<0.10',
           'munch<5',
           'ulid-py<1.2',
           'hashids<1.4',

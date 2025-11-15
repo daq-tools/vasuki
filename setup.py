@@ -78,7 +78,7 @@ setup(name='vasuki',
           'test': [
               'httpx<0.29',
               'pytest<10',
-              'pytest-cov<7',
+              'pytest-cov<8',
           ],
       },
       entry_points={

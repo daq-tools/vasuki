@@ -7,7 +7,7 @@ in progress
 ===========
 - Dependencies: Updated to ``responder 3.0.0``
 - Dependencies: Updated to ``docopt-ng``
-- Verified support for Python 3.13
+- Verified support for Python 3.13 and 3.14
 
 2024-05-10 0.7.1
 ================

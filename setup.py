@@ -63,7 +63,7 @@ setup(name='vasuki',
           'ulid-py<1.2',
           'hashids<1.4',
           'gibberish<0.5',
-          #'correct-horse==0.7.0',
+          #'correct-horse==0.7.1',
           #'flufl.i18n==1.1.3',
       ],
       extras_require={

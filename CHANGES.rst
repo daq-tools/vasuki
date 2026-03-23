@@ -5,6 +5,9 @@ Changelog
 
 in progress
 ===========
+
+2026-03-23 0.7.3
+================
 - Dependencies: Relaxed version pinning for ``responder`` package
 
 2025-12-15 0.7.2

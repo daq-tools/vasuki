@@ -71,7 +71,7 @@ setup(name='vasuki',
               'build<2',
               'bump2version==1.0.1',
               'poethepoet<1',
-              'twine<7',
+              'twine<8',
           ],
           'service': [
               'responder<4',

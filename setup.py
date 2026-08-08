@@ -74,7 +74,7 @@ setup(name='vasuki',
               'twine<8',
           ],
           'service': [
-              'responder<4',
+              'responder<10',
           ],
           'test': [
               'httpx<0.29',

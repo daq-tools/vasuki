@@ -5,6 +5,7 @@ Changelog
 
 in progress
 ===========
+- Verified support for Python 3.15
 
 2026-03-23 0.7.3
 ================
